@@ -26,12 +26,12 @@
 
     <groupId>com.okta.spring</groupId>
     <artifactId>okta-spring-boot-parent</artifactId>
-    <version>2.1.7-SNAPSHOT</version>
+    <version>3.0.1-SNAPSHOT</version>
     <name>Okta Spring Boot</name>
     <packaging>pom</packaging>
 
     <properties>
-        <spring-boot.version>2.7.5</spring-boot.version>
+        <spring-boot.version>3.0.1</spring-boot.version>
         <spring-cloud.version>3.1.5</spring-cloud.version>
         <github.slug>okta/okta-spring-boot</github.slug>
         <okta.sdk.version>8.2.2</okta.sdk.version>
@@ -76,28 +76,28 @@
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-boot-starter</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-security-oauth2</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
             </dependency>
 
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-sdk</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-boot-integration-tests-common-servlet</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-boot-integration-tests-common-servlet</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
                 <classifier>tests</classifier>
                 <type>test-jar</type>
                 <scope>test</scope>
@@ -105,12 +105,12 @@
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-boot-integration-tests-common-reactive</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.okta.spring</groupId>
                 <artifactId>okta-spring-boot-integration-tests-common-reactive</artifactId>
-                <version>2.1.7-SNAPSHOT</version>
+                <version>3.0.1-SNAPSHOT</version>
                 <classifier>tests</classifier>
                 <type>test-jar</type>
                 <scope>test</scope>
@@ -144,7 +144,7 @@
             <dependency>
                 <groupId>com.okta.oidc.tck</groupId>
                 <artifactId>okta-oidc-tck</artifactId>
-                <version>0.5.9</version>
+                <version>0.5.10</version>
             </dependency>
 
             <!-- test dependencies -->
@@ -157,7 +157,7 @@
             <dependency>
                 <groupId>com.github.tomakehurst</groupId>
                 <artifactId>wiremock-standalone</artifactId>
-                <version>2.27.2</version>
+                <version>3.0.0-beta-2</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -179,6 +179,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+       <pluginManagement>
+          <plugins>
+             <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>8.0.0</version>
+             </plugin>
+          </plugins>
+       </pluginManagement>
+    </build>
 
     <profiles>
         <profile>
